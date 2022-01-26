@@ -46,11 +46,15 @@
   color: white
 
 }
+.formularioUide {
+  color: rgb(192, 122, 31) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px !important;
+}
 .container {
-  column-count: 3;
-  column-gap: 40px;
+  
+  height: fit-content;
+  width: fit-content;
+  align-content: center;
 }
-.container1 {
-  column-count: 1;
-  column-gap: 40px;
-}
+

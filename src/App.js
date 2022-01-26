@@ -9,18 +9,15 @@ import CreateSeries from './CreateSeries';
 function App() {
   return (
     <div className="main">
-      <div>
-        <h2>
-          CRUD con ReactJS
-        </h2>
-      </div>
-      <br></br>
-      <span></span>
-      <div class="container">
+      <div class='container'>
         <div>
-          <Create />
+          <h2>
+            CRUD con ReactJS
+          </h2>
         </div>
         <div>
+          <Create />
+          <br />
           <CreateSeries />
         </div>
       </div>
