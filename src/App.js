@@ -16,13 +16,13 @@ function App() {
           </h2>
         </div>
         <div>
-          <div>
+          <div class="peliculas">
             <h1>Aniadir peliculas</h1>
             <Create />
           </div>
           <br />
-          <div>
-          <h1>Aniadir series</h1>
+          <div class="series">
+            <h1>Aniadir series</h1>
             <CreateSeries />
           </div>
 
