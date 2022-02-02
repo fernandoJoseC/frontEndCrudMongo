@@ -4,31 +4,33 @@ import axios from 'axios';
 var qs = require('qs');
 
 export default function Create() {
-    const [nombrePelicula, setNombrePelicula] = useState('');
+    const [nombre, setNombre] = useState('');
     const [director, setDirector] = useState('');
-    const [mayorEdad, setMayor] = useState('');
-    const [edad, setEdad] = useState('');
-    const [password, setPassword] = useState('');
-    const [fecha, setFecha] = useState('');
+    //const [mayorEdad, setMayor] = useState('');
+    const [anioEstreno, setAnioEstreno] = useState('');
+    const [idioma, setIdioma] = useState('');
+    const [duracion, setDuracion] = useState('');
 
     const enviarDatos = () => {
-        console.log(nombrePelicula);
+        console.log(nombre);
         console.log(director);
-        console.log(edad);
-        console.log(mayorEdad);
-        console.log(password);
-        console.log(fecha);
+        console.log(anioEstreno);
+        console.log(idioma);
+        //console.log(password);
+        console.log(duracion);
 
         
         var data = qs.stringify({
-            'nombre': nombrePelicula,
-            'direccot': director,
-            'anio_estreno': edad,
-            'idioma': password
+            'nombre': nombre,
+            'director': director,
+            'anioEstreno': anioEstreno,
+            'idioma': idioma,
+            'duracion': duracion
         });
         var config = {
             method: 'post',
-            url: 'https://uide-crud.herokuapp.com/peliculas/crearPelicula',
+            //url: 'https://uide-crud.herokuapp.com/peliculas/crearPelicula',
+            url: 'https://crudmongofernando.herokuapp.com/peliculas/crearPelicula',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -52,7 +54,7 @@ export default function Create() {
             <Form.Field>
                 <label>Nombre de la pelicula</label>
                 <br></br>
-                <input placeholder="Pelicula" onChange={(e) => setNombrePelicula(e.target.value)}></input>
+                <input placeholder="Pelicula" onChange={(e) => setNombre(e.target.value)}></input>
             </Form.Field>
             <br />
             <Form.Field>
@@ -61,27 +63,25 @@ export default function Create() {
                 <input placeholder="Director" onChange={(e) => setDirector(e.target.value)}></input>
             </Form.Field>
             <br />
-            <Form.Field>
-                <Checkbox label="es mayor de edad" onChange={(e) => setMayor(!mayorEdad)}></Checkbox>
-            </Form.Field>
+            
             <br />
             <Form.Field>
-                <label>Edad</label>
+                <label>Anio Estreno</label>
                 <br></br>
-                <input type="number" placeholder="edad" onChange={(e) => setEdad(e.target.value)}></input>
+                <input type="number" placeholder="anio Estreno" onChange={(e) => setAnioEstreno(e.target.value)}></input>
             </Form.Field>
             <br />
             <Form.Field>
 
-                <label>Contrasena</label>
+                <label>Idioma</label>
                 <br></br>
-                <input type="password" placeholder="contrasena" onChange={(e) => setPassword(e.target.value)}></input>
+                <input placeholder="idioma" onChange={(e) => setIdioma(e.target.value)}></input>
             </Form.Field>
             <br />
             <Form.Field>
-                <label>Fecha</label>
+                <label>Duracion</label>
                 <br></br>
-                <input type="date" placeholder="fecha" onChange={(e) => setFecha(e.target.value)}></input>
+                <input placeholder="duracion" onChange={(e) => setDuracion(e.target.value)}></input>
             </Form.Field>
             <br />
             <Button onClick={enviarDatos} type="submit">Guardar</Button>
