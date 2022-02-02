@@ -60,32 +60,36 @@ export default function CreateSeries() {
                 <br></br>
                 <input placeholder='Serie' onChange={(e) => setNombre(e.target.value)}></input>
             </Form.Field>
+            <br></br>
             <Form.Field>
                 <label>Numero de temporadas</label>
                 <br></br>
                 <input placeholder='Temporadas' onChange={(e) => setNumTemporadas(e.target.value)}></input>
             </Form.Field>
+            <br></br>
             <Form.Field>
                 <label>Director</label>
                 <br></br>
                 <input placeholder='Director' onChange={(e) => setDirector(e.target.value)}></input>
             </Form.Field>
+            <br></br>
             <Form.Field>
                 <label>Idioma</label>
                 <br></br>
                 <input placeholder='Idioma' onChange={(e) => setIdioma(e.target.value)}></input>
             </Form.Field>
+            <br></br>
             <Form.Field>
                 <label>Año de estreno</label>
                 <br></br>
                 <input type="number" placeholder='Anio' onChange={(e) => setAnioEstreno(e.target.value)}></input>
             </Form.Field>
+            <br></br>
             <Form.Field>
                 <label>Descripcion</label>
                 <br></br>
                 <input placeholder='Descripcion' onChange={(e) => setDescripcion(e.target.value)}></input>
             </Form.Field>
-            
             <br />
             <Button onClick={enviarDatos} type="submit">Guardar</Button>
         </Form>
