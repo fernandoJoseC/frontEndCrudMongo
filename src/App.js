@@ -16,9 +16,16 @@ function App() {
           </h2>
         </div>
         <div>
-          <Create />
+          <div>
+            <h1>Aniadir peliculas</h1>
+            <Create />
+          </div>
           <br />
-          <CreateSeries />
+          <div>
+          <h1>Aniadir series</h1>
+            <CreateSeries />
+          </div>
+
         </div>
       </div>
     </div>
